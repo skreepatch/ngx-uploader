@@ -224,7 +224,7 @@ export class NgUploaderService {
             }
           };
 
-          observer.next({ type: 'uploading', file: file });
+          observer.next(<any>{ type: 'uploading', file: file });
         }
       }, false);
 
@@ -255,7 +255,7 @@ export class NgUploaderService {
             file.response = xhr.response;
           }
 
-          observer.next({ type: 'done', file: file });
+          observer.next(<any>{ type: 'done', file: file });
           observer.complete();
         }
       };
